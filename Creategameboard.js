@@ -18,12 +18,15 @@ class Grid {
             this.gridContainer.appendChild(this.rowElement)
             for (let columnIndex = 0; columnIndex < this.numberOfColumns; columnIndex++) {
                 const cell = new Cell(rowIndex, columnIndex, this.rowElement)
-                if (rowIndex === 0) {
-                    Addcategory(columnIndex, cell)
-                }
+                // if (rowIndex === 0) {
+                //     Addcategory(columnIndex, cell)
+                // }
                 if (rowIndex > 0) {
                     Addvalue(rowIndex, cell)
                 }
+                // if (rowIndex > 0) {
+                // addEventHandler("click", Displayquestion())
+                // }
                 this.rowArray.push(cell)
             }
         }
@@ -48,3 +51,20 @@ const grid = new Grid({
     numberOfColumns: 6,
     parentContainerId: "main",
 })
+
+function Addvalue(rowIndex, cell) {
+    const value = rowIndex * 100
+    cell.cell.innerHTML = "$" + value
+}
+
+function Addscore() {
+    let score = 0
+}
+
+function Inputanswer() {
+    let answerBox = document.createElement("INPUT")
+    document.getElementById("answer")
+    answerBox.setAttribute("type", "text")
+    answerBox.setAttribute("value", "What/Who/When/Where is")
+    answer.appendChild(answerBox)
+}
