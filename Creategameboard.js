@@ -21,6 +21,9 @@ class Grid {
                 if (rowIndex === 0) {
                     Addcategory(columnIndex, cell)
                 }
+                if (rowIndex > 0) {
+                    Addvalue(rowIndex, cell)
+                }
                 this.rowArray.push(cell)
             }
         }
