@@ -4,7 +4,7 @@ class JeopardyGrid extends Grid {
         options.numberOfColumns = options.categoryIDs.length
         super(options)
         this.categoryIDs = options.categoryIDs
-        this.jServiceURL = "http://cors-anywhere.herokuapp.com/" + "http://jservice.io/api/category?id="
+        this.jServiceURL = "https://cors-anywhere.herokuapp.com/" + "http://jservice.io/api/category?id="
         this.categories = null
 
         this.getCategories()
